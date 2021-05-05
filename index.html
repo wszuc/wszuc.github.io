@@ -1,141 +1,95 @@
-<!DOCTYPE HTML>
-<!--
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>My Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="images/avatar.png" alt="" /></span>
-					<h1 id="logo">Wiktor Szuca</h1>
-					<p>Beginner but aspiring front-end developer</p>
-				</header>
-				<nav id="nav">
-					<ul>
-						<li><a href="#one" class="active">About</a></li>
-						<li><a href="#two">Skills</a></li>
-						<li><a href="#three">Projects</a></li>
-						<li><a href="#four">Contact</a></li>
-					</ul>
-				</nav>
-				<footer>
-					<ul class="icons">
-						<li><a href="https://stackoverflow.com/users/13969734/wiktor" class="icon brands fa-stack-overflow"><span class="label">Stack Overflow</span></a></li>
-						<li><a href="https://github.com/wszuc/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="#" class="icon brands fa-fonticons-fi"><span class="label">fiverr</span></a></li>
-					</ul>
-				</footer>
-			</section>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/fontawesome.min.css">
+    <link href="styles/brands.min.css" rel="stylesheet">
+</head>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<body>
+    <div class="hero">
+        <div class="text fadeable">
+            <h1>This is my portfolio</h1>
+            <p>My name is Wiktor Szuca and I'm a front-end developer</p>
+            <button class="about-button-open">About me</button>
+        </div>
+        <div id="about">
+            <div class="about-inner">
+                <article>
+                    <h2>About me</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, autem?</p>
+                </article>
+                <picture>
+                    <img src="images/me-mini.webp">
+                </picture>
+                <button class="about-button-close">X</button>
+            </div>
+        </div>
+        <div class="red fadeable"></div>
+        <div class="green fadeable">
+            <div class="blind"></div>
+        </div>
+        <div class="blue fadeable"></div>
+        <div class="black fadeable">
+            <div class="blind"></div>
+        </div>
+        <div class="yellow fadeable"></div>
+    </div>
+    <div id="works">
+        <h2>My works</h2>
+        <picture class="picture-1">
+            <img src="images/apartament.webp">
+        </picture>
+        <div class="description-1">
+            <h3>Proj 1</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, iusto!Lorem ipsum dolor sit amet.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, vel!</p>
+        </div>
+        <picture class="picture-2">
+            <img src="images/apartament.webp">
+        </picture>
+        <div class="description-2">
+            <h3>Proj 2</h3>
+            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quis!</p>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="red no-blind"></div>
+        <div class="green ">
+            <div class="blind"></div>
+        </div>
+        <div class="blue no-blind"></div>
+        <div class="black ">
+            <div class="blind"></div>
+        </div>
+        <div class="yellow no-blind"></div>
 
-				<!-- Main -->
-					<div id="main">
+        <div class="contact-content">
+            <h2 class="message-header">Leave me a message</h2>
+            <form class="contact-form" action="https://formspree.io/f/xknkokpv" method="POST">
+                <label>Email:</label>
+                <input type="email" name="email" placeholder="Your email" required>
+                <label>Message:</label>
+                <textarea name="message" placeholder="Type your message here" required></textarea>
+                <button id="my-form-button">Submit</button>
+                <p id="my-form-status" rows="4"></p>
+            </form>
+            <h2 class="socials-header">Socials</h2>
+            <div class="socials">
+                <a href="https://github.com/wszuc" target="_blank"><i class="fab fa-github-square"></i></a>
+                <a href="https://stackoverflow.com/users/13969734/wiktor" target="_blank"><i class="fab fa-stack-overflow"></i></a>
+                <a href="https://www.linkedin.com/in/wiktor-szuca" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div> 
+    <script type="module" src="./node_modules/animate.js"></script>
+</body>
 
-						<!-- One -->
-							<section id="one">
-								<div class="image main" data-position="center">
-									<img src="images/banner.jpg" alt="" />
-								</div>
-								<div class="container">
-									<header class="major">
-										<h2>About me</h2>
-										<p>My adventure with web development has just started,<br />
-										but I already know it's my passion</p>
-									</header>
-									<p>I'm a full time student at the <i>Gdańsk University of Technology</i> on major called <i>Automation and Robotics</i>. In my spare time I develop my front-end skills.</br>
-									I believe this branch of web developement combines artiscitic sense with solid dose of technical knowledge. I'm up for various design or coding challenges.</p>
-
-								</div>
-							</section>
-
-						<!-- Two -->
-							<section id="two">
-								<div class="container">
-									<h3>My Skills</h3>
-									<p>Here are some of my skills I've already acquired and used in real projects. No technologies that I barely know.</p>
-									<ul class="feature-icons">
-										<li class="icon brands fa-html5">HTML5</li>
-										<li class="icon brands fa-css3">CSS3</li>
-										<li class="icon brands fa-js">JavaScript</li>
-										<li class="icon brands fa-wordpress">Wordpress</li>
-										<li class="icon solid fa-mobile">Responsive Technologies</li>
-										<li class="icon solid fa-lock">Gaining SSL certificates</li>
-									</ul>
-								</div>
-							</section>
-
-						<!-- Three -->
-							<section id="three">
-								<div class="container">
-									<h3>My Projects</h3>
-									<p>Might not be a lot, but they were made with precision and attention to details.</p>
-									<div class="features">
-										<article>
-											<a href="https://apartament-sobieszewo.pl" target="_blank" class="image"><img src="images/pic01.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Apartament for rent</h4>
-												<p>Static website for some Polish people, advertising their apartament. Technologies used: <strong>Wordpress</strong> (most important plugins: <strong>Contact Form 7, Yoast SEO</strong>), <strong>JavaScript, custom SSL certificate.</strong></p>
-											</div>
-										</article>
-										<article>
-											<a href="http://wikiford.beep.pl" target="_blank" class="image"><img src="images/pic02.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>My scripts' hub</h4>
-												<p>My personal 'hub' for some practical JavaScript excercises.</br>Technologies used: pure <strong>CSS + HTML, vanilla JavaScript.</strong></p>
-											</div>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Future - productivity helper</h4>
-												<p>That's the project I'm currently working on - a web application for those, who value productivity. Some sort of 'hub' for different timers, instruction and guides that will help people to achieve their goals. Technologies: <strong>Bootstrap, React, JavaScript</strong>, HTML+CSS.</p>
-											</div>
-										</article>
-									</div>
-								</div>
-							</section>
-
-						<!-- Four -->
-							<section id="four">
-								<div class="container">
-									<h3>Contact Me</h3>
-									<p>Feel free to talk! Ask a question, share your opinion or tell how is your day going :)</p>
-									<p><i class="fas fa-envelope"></i> <a href="mailto:wiktor.szuca@gmail.com"><i>wiktor.szuca@gmail.com</i></a></p>
-								</div>
-							</section>
-					</div>
-
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>&copy; Wiktor Szuca. All rights reserved.</li>
-							</ul>
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
 </html>
