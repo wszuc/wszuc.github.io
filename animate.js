@@ -1,4 +1,4 @@
-import anime from './animejs/lib/anime.min.js';
+import anime from '/node_modules/animejs/lib/anime.min.js';
 
 // HERO ANIMATIONS
 
