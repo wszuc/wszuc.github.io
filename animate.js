@@ -3,14 +3,14 @@ import anime from '/node_modules/animejs/lib/anime.es.js';
 // HERO ANIMATIONS
 
 const colorAppearHero = anime({
-    targets: '.hero',
-    width: '100vw',
+    targets: '.hero .animation-left',
+    width: '100%',
     easing: 'cubicBezier(0.895, 0.030, 0.685, 0.220)',
 });
 
 const blindDissapearHero = anime({
     targets: '.hero .blind',
-    width: '0vw',
+    width: '0%',
     easing: 'cubicBezier(0.895, 0.030, 0.685, 0.220)',
 });
 
@@ -38,11 +38,12 @@ function fireContactAnim(){
   
 }
 
-// TRANSITIONS - BLURRING
+// TRANSITIONS - BLURRING & About section
 
 const aboutSection = document.querySelector('#about');
 const aboutOpenButton = document.querySelector('.about-button-open');
 const aboutCloseButton = document.querySelector('.about-button-close');
+const body = document.querySelector('body');
 aboutSection.style.display = 'none';
 
 aboutOpenButton.addEventListener('click', showAbout);
@@ -52,11 +53,13 @@ var isOpened = Boolean(false);
 
 function showAbout(){
     if(isOpened==false){
+        body.classList.add('modal-open');
         anime({targets: aboutSection, easing: 'linear', update: function(){aboutSection.style.display = 'flex';}, filter: 'opacity(1)'});
         anime({targets: '.fadeable', filter: 'blur(10px)', easing: 'linear', duration: 1500});
         isOpened = !isOpened;
     }
     else{
+        body.classList.remove('modal-open');
         anime({targets: aboutSection, easing: 'linear', update: function(){aboutSection.style.display = 'none'}});
         anime({targets: '.fadeable', filter: 'blur(0px)', easing: 'linear', duration: 500});
         isOpened  = !isOpened;

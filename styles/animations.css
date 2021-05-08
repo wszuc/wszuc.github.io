@@ -1,7 +1,7 @@
 html, body{
     margin: 0;
     font-family: 'Lato', Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
+    width:100%;
 }
 
 /* global fluid typography */
@@ -39,41 +39,45 @@ button{
 .hero{
     display: flex;
     height: 100vh;
-    width: 0vw;
+    
     flex-direction: column;
     justify-content: center;
+    
 }
 
 .hero .blind{
     background-color: white;
     height: 100%;
-    width: 100vw;
+    width: 100%;
 }
 
 .hero .red {
     background-color: #e13253;
     height: 100%;
+    width: 0%;
 }
 
 .hero .green{
     background-color: #85e78f;
     height: 100%;
-    width: 100vw;
+    width: 100%;
 }
 
 .hero .blue{
     background-color: #1785b9;
     height: 100%;
+    width: 0%;
 }
 
 .hero .black{
     background-color: #383838;
     height: 100%;
-    width: 100vw;
+    width: 100%;
 }
 .hero .yellow{
     background-color: #EDCB31;
     height: 100%;
+    width: 0%;
 }
 
 .hero .text{
@@ -99,6 +103,12 @@ button{
 
 /* about section */
 
+body.modal-open {   /* prevent scrolling while modal opened */
+    height: 100vh;
+    overflow-y: hidden;
+    position: fixed;
+  }
+
 #about{
     z-index: 2;
     position: absolute;
@@ -107,6 +117,7 @@ button{
     height: 100%;
     justify-content: center; 
 }
+
 
 #about .about-inner{
     display: flex;
@@ -212,9 +223,9 @@ button{
 }
 
 #contact{
-    width: 100vw;
+    
     display: flex;
-    height: 50vh;
+    height: 55vh;
     justify-content: space-evenly;
     flex-direction: row;
     background-color: transparent;
@@ -223,6 +234,7 @@ button{
 
 #contact .contact-content{
     position: absolute;
+    width: 100%;
     z-index: 1;
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -276,7 +288,7 @@ input{
 }
 
 textarea{
-    min-width: 40ch;
+   width: 60%
 }
 
 @media screen and (max-width: 800px){
@@ -311,15 +323,8 @@ textarea{
         height: 100vh;
     }
     #contact .contact-content{
-        grid-template-areas: 
-        "mes-h"
-        "form"
-        "soc-h"
-        "socials";
+        display:flex;
+        flex-direction: column;
+        text-align: center;
     }
-    #contact .contact-content form{
-        width: 100vw;
-    }
-
-
 }
