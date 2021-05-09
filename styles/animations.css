@@ -26,6 +26,20 @@ button{
     font-family: inherit;
 }
 
+button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px rgb(79, 79, 255);
+    border-color: #2d51b4;
+    transition: 0.3s;
+}
+
+strong{
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+}
 /* z-indexes:
 
  - hero backround: 0
@@ -129,6 +143,35 @@ body.modal-open {   /* prevent scrolling while modal opened */
     height: 100%;
 }
 
+#about ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    transition-duration: .5s;
+}
+
+#about i:hover{
+    transition-duration: .5s;
+}
+
+#about li .html:hover{
+    color: #C93232;
+}
+
+#about li .css:hover{
+    color: #2d51b4;
+}
+
+#about li .js:hover{
+    color: #c9bf32;
+}
+
+#about li .react:hover{
+    color:#32c4c9;
+}
+
 #about img{
     min-width: 200px;
     max-width: 30vw;
@@ -150,6 +193,14 @@ body.modal-open {   /* prevent scrolling while modal opened */
     font-size: clamp(2em, 4.5vw, 3em);
 }
 
+#about button:hover{
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    color: black;
+    transition: 0.3s;
+}
+
 /* works section */
 
 #works{
@@ -161,7 +212,8 @@ body.modal-open {   /* prevent scrolling while modal opened */
     grid-template-areas: 
     "h2 h2"
     "pic-1 des-1"
-    "des-2 pic-2";
+    "des-3 pic-3"
+    "pic-2 des-2";
     margin-bottom: 8vh;
 }
 
@@ -170,21 +222,36 @@ body.modal-open {   /* prevent scrolling while modal opened */
     justify-self: center;
 }
 
+#works img{
+    transition: 0.3s ease-out;
+}
+
+#works img:hover{
+    box-shadow: 0 0 15px rgb(79, 79, 255);
+    transition: 0.3s;
+}
+
 #works .picture-1{
     grid-area: pic-1;
     justify-self: left;
 }
-#works .picture-2{
-    grid-area: pic-2;
-    justify-self: right;
-}
 #works .description-1{
     grid-area: des-1;
+}
+#works .picture-3{
+    grid-area: pic-3;
+    justify-self: right;
+}
+#works .description-3{
+    grid-area: des-3;
+}
+#works .picture-2{
+    grid-area: pic-2;
+    justify-self: left;
 }
 #works .description-2{
     grid-area: des-2;
 }
-
 /* contact section */
 #contact .red {
     background-color: #e13253;
@@ -297,30 +364,41 @@ textarea{
         align-items: center;
         height: 100%;
     }
+
+    #about .about-inner article h2{
+        text-align: center;
+    }
+
     #about button{
         margin-bottom: 90vh;
         margin-left: 85vw;
     }
 
+    #about picture{
+        display: none;
+    }
     #works{
         grid-template-areas: 
         "h2"
         "pic-1"
         "des-1"
+        "pic-3"
+        "des-3"
         "pic-2"
         "des-2";
     }
     #works .picture-1{
-        grid-area: pic-1;
         justify-self: center;
     }
     #works .picture-2{
-        grid-area: pic-2;
+        justify-self: center;
+    }
+    #works .picture-3{
         justify-self: center;
     }
 
     #contact{
-        height: 100vh;
+        height: 90vh;
     }
     #contact .contact-content{
         display:flex;
