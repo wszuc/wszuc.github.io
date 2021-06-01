@@ -127,7 +127,6 @@ const offsetContact =
 let isContactAnimated = Boolean(false);
 
 window.addEventListener("scroll", function () {
-  console.log(scrollY);
   if (scrollY >= offsetContact && isContactAnimated == false) {
     fireContactAnim();
   }
