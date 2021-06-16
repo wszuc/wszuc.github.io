@@ -226,7 +226,8 @@ body.modal-open {
     "h2 h2"
     "pic-1 des-1"
     "des-3 pic-3"
-    "pic-2 des-2";
+    "pic-4 des-4"
+    "des-2 pic-2";
   margin-bottom: 8vh;
 }
 
@@ -260,10 +261,17 @@ body.modal-open {
 }
 #works .picture-2 {
   grid-area: pic-2;
-  justify-self: left;
+  justify-self: right;
 }
 #works .description-2 {
   grid-area: des-2;
+}
+#works .picture-4 {
+  grid-area: pic-4;
+  justify-self: left;
+}
+#works .description-4 {
+  grid-area: des-4;
 }
 /* contact section */
 #contact .red {
