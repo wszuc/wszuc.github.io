@@ -88,6 +88,10 @@ var form = document.querySelector(".contact-form");
 
 async function handleSubmit(event) {
   event.preventDefault();
+  if (window.innerWidth > 800) {
+    const contactHeight = document.getElementById("contact").offsetHeight;
+    document.getElementById("contact").style.height = `${contactHeight + 60}px`;
+  }
   var status = document.getElementById("my-form-status");
   var data = new FormData(event.target);
   fetch(event.target.action, {
@@ -98,12 +102,11 @@ async function handleSubmit(event) {
     },
   })
     .then((response) => {
-      status.innerHTML = "<p>Message sent!</p>";
+      status.innerHTML = "Message sent!";
       form.reset();
     })
     .catch((error) => {
-      status.innerHTML =
-        "<p>Oops! There was a problem sending your message :/</p>";
+      status.innerHTML = "Oops! There was a problem sending your message";
     });
 }
 form.addEventListener("submit", handleSubmit);
