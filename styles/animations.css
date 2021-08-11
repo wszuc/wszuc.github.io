@@ -34,18 +34,26 @@ img {
 }
 
 button {
-  border: thin solid grey;
-  border-radius: 7px;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
+  border: transparent;
+  background-color: white;
   font-family: inherit;
+  padding: 15px;
+  font-style: italic;
 }
 
 button:hover {
   cursor: pointer;
-  box-shadow: 0 0 10px rgb(79, 79, 255);
-  border-color: #2d51b4;
   transition: 0.3s;
+  border-color: transparent;
+  box-shadow: none;
+  background-color: #7b94db;
+}
+.arrow-ico {
+  color: black;
+  font-size: 25px;
+  z-index: 2;
+  transform: translateX(-10px) translateY(15px);
+  position: absolute;
 }
 
 strong {
@@ -196,6 +204,7 @@ body.modal-open {
 
 #about button {
   position: fixed;
+  font-style: normal;
   font-size: 3em;
   font-weight: 100;
   border: none;
@@ -312,7 +321,7 @@ body.modal-open {
 
 #contact {
   display: flex;
-  height: 55vh;
+  height: 56vh;
   justify-content: space-evenly;
   flex-direction: row;
   background-color: transparent;
